@@ -12,12 +12,10 @@ function App() {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
+    console.log("ENV VAR:", import.meta.env.VITE_API_URL);
     const fetchData = async () => {
       try {
-        // const res = await fetch(import.meta.env.VITE_API_URL);
-        const res = await fetch(
-          "https://dashboard-be-rpsc.onrender.com/api/ransomwareData"
-        );
+        const res = await fetch(import.meta.env.VITE_API_URL);
 
         console.log("Fetching from:", import.meta.env.VITE_API_URL);
         if (!res.ok) {
