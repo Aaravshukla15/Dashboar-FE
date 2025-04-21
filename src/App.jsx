@@ -15,6 +15,7 @@ function App() {
     const fetchData = async () => {
       try {
         const res = await fetch(import.meta.env.VITE_API_URL);
+        console.log("Fetching from:", import.meta.env.VITE_API_URL);
         if (!res.ok) {
           console.error(`HTTP Error: ${res.status} - ${res.statusText}`);
           return;
