@@ -1,0 +1,107 @@
+/* Filters Container */
+.filters-container {
+  background-color: #2d3748; /* Dark background */
+  padding: 20px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* Center items horizontally */
+}
+
+/* Title */
+.filters-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 0%;
+}
+
+/* Buttons Container */
+.filters-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center buttons horizontally */
+}
+
+/* Filter Button */
+.filter-button {
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: #4a5568;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.filter-button.active {
+  background-color: #3182ce; /* Blue background when active */
+}
+
+.filter-button:hover {
+  background-color: #2b6cb0; /* Darker blue on hover */
+}
+
+/* Select Box and Input */
+.filter-select,
+.filter-input {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #4a5568;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Range Input */
+.filter-range {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Apply Button */
+.filter-apply-button {
+  padding: 10px 20px;
+  background-color: #48bb78; /* Green */
+  color: white;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center; /* Ensures it stays centered in column layout */
+  width: 30%;
+  max-width: 300px;
+}
+
+/* Hover for Apply Button */
+.filter-apply-button:hover {
+  background-color: #38a169; /* Darker green on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .filter-range {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-apply-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
